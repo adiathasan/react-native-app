@@ -1,10 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { globalStyles, pallete } from '../config/styles';
 
 const Header = () => {
 	return (
 		<View style={styles.header}>
-			<Text style={styles.header_text}>To Do Pro</Text>
+			<Text style={styles.header_text}>GameZone</Text>
 		</View>
 	);
 };
@@ -17,13 +18,11 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'center',
 		height: 80,
-		backgroundColor: '#18adda86',
-		color: '#fff',
+		backgroundColor: pallete.color.primary,
 	},
 	header_text: {
-		fontWeight: 'bold',
 		fontSize: 20,
-		color: '#fff',
-		fontStyle: 'italic',
+		fontWeight: 'bold',
+		...pallete.text,
 	},
 });
